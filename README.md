@@ -9,7 +9,6 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_playwright-e2e&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_playwright-e2e)
 
 ## Getting Started
-
 In order to execute this project you must follow the steps below:
 
 1. Install [Node JS](https://nodejs.org/) (version >= 22.x)
