@@ -23,6 +23,7 @@ desative-a antes de usar a análise via CI.
 No [GitHub do fork](https://github.com/GiaNinWorld/playwright-e2e/settings/secrets/actions),
 abra **Settings > Secrets and variables > Actions > New repository secret** e cadastre
 `SONAR_TOKEN` com um token do SonarQube Cloud que tenha permissão para analisar esse projeto.
+O nome `SONAR_KEY` também é aceito como alternativa; se ambos existirem, `SONAR_TOKEN` tem prioridade.
 Não coloque o token em arquivos do projeto.
 
 O workflow verifica se o secret foi cadastrado antes de executar o scanner.
