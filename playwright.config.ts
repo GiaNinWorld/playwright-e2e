@@ -8,7 +8,7 @@ const config: PlaywrightTestConfig = {
     trace: 'on',
     channel: 'msedge',
     locale: 'pt-BR',
-    headless: false,
+    headless: !!process.env.CI,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     screenshot: 'on',

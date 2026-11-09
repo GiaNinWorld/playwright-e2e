@@ -2,13 +2,36 @@
 
 ## GitHub Actions + SonarCloud
 
-[![Build and Tests](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml)
+[![Build and Tests](https://github.com/GiaNinWorld/playwright-e2e/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/GiaNinWorld/playwright-e2e/actions/workflows/node.js.yml)
 
 </br>
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_playwright-e2e&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_playwright-e2e)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=GiaNinWorld_playwright-e2e&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=GiaNinWorld_playwright-e2e)
 
 ## Getting Started
+
+### Configurar o SonarQube Cloud no fork
+
+O projeto [GiaNinWorld_playwright-e2e](https://sonarcloud.io/summary/new_code?id=GiaNinWorld_playwright-e2e)
+já está configurado em `sonar-project.properties`, na organização `gianinworld`.
+Não é necessário cadastrar variáveis para as chaves do projeto e da organização.
+
+Na [configuração de análise do Sonar](https://sonarcloud.io/project/analysis_method?id=GiaNinWorld_playwright-e2e),
+selecione a análise via GitHub Actions. Se a análise automática estiver habilitada,
+desative-a antes de usar a análise via CI.
+
+No [GitHub do fork](https://github.com/GiaNinWorld/playwright-e2e/settings/secrets/actions),
+abra **Settings > Secrets and variables > Actions > New repository secret** e cadastre
+`SONAR_TOKEN` com um token do SonarQube Cloud que tenha permissão para analisar esse projeto.
+Não coloque o token em arquivos do projeto.
+
+O workflow verifica se o secret foi cadastrado antes de executar o scanner.
+Depois de salvar o secret e enviar as alterações do workflow, execute novamente o GitHub Actions.
+
+Documentação: [SonarQube Cloud com GitHub Actions](https://docs.sonarsource.com/sonarqube-cloud/analyzing-source-code/ci-based-analysis/github-actions-for-sonarcloud).
+
+### Executar os testes
+
 In order to execute this project you must follow the steps below:
 
 1. Install [Node JS](https://nodejs.org/) (version >= 22.x)
